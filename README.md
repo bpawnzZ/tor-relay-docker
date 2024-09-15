@@ -39,7 +39,6 @@ Edit the `docker-compose.yml` file to customize your relay. Here are the availab
 - `DIR_PORT`: DirPort for directory information (default: 9030)
 - `RELAY_BANDWIDTH_RATE`: Bandwidth rate limit in KB/s
 - `RELAY_BANDWIDTH_BURST`: Burst bandwidth limit in KB/s
-- `RELAY_TYPE`: Set to "GUARD" for a guard relay
 - `TOR_SOCKS_PORT`: SOCKS port (default: 9050)
 
 ## 🔒 Security Considerations

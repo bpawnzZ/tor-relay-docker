@@ -16,7 +16,8 @@ services:
       - RELAY_BANDWIDTH_BURST=2048
       - TOR_SOCKS_PORT=9050
       - EXTERNAL_ADDRESS=your.external.ip.address
-      - IPV6_EXIT=0  
+      - IPV6_EXIT=0 
+      - SOCKS_POLICY=accept *:*
     volumes:
       - ./tor-data:/var/lib/tor
 

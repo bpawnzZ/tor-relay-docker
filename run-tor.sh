@@ -6,7 +6,8 @@ ContactInfo $CONTACT_INFO
 ORPort $RELAY_PORT
 DirPort $DIR_PORT
 ExitRelay 0
-SocksPort $TOR_SOCKS_PORT
+SocksPort 0.0.0.0:$TOR_SOCKS_PORT
+SocksPolicy $SOCKS_POLICY
 ControlPort 9051
 RelayBandwidthRate $RELAY_BANDWIDTH_RATE KB
 RelayBandwidthBurst $RELAY_BANDWIDTH_BURST KB

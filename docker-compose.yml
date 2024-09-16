@@ -1,0 +1,24 @@
+version: '3'
+services:
+  tor-guard-relay:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tor-guard-relay:latest
+    container_name: tor-guard-relay
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - TOR_NICKNAME=${TOR_NICKNAME:-mydockerguard}
+      - CONTACT_INFO=${CONTACT_INFO:-anonymous@example.com}
+      - RELAY_PORT=${RELAY_PORT:-9101}
+      - DIR_PORT=${DIR_PORT:-9030}
+      - RELAY_BANDWIDTH_RATE=${RELAY_BANDWIDTH_RATE:-3072}
+      - RELAY_BANDWIDTH_BURST=${RELAY_BANDWIDTH_BURST:-4096}
+      - TOR_SOCKS_PORT=${TOR_SOCKS_PORT:-127.0.0.1:9050}
+      - EXTERNAL_ADDRESS=${EXTERNAL_ADDRESS:-auto}
+      - CONTROL_PORT=${CONTROL_PORT:-127.0.0.1:9051}
+      - USE_COOKIE_AUTH=${USE_COOKIE_AUTH:-1}
+    volumes:
+      - ./tor-data:/var/lib/tor
+    user: debian-tor

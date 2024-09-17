@@ -22,7 +22,7 @@ COPY run-tor.sh /run-tor.sh
 RUN chmod +x /run-tor.sh
 
 # Expose the necessary ports
-EXPOSE 9101 9030 9050 9051
+EXPOSE 9001 9030 9050 9051
 
 # Switch to the debian-tor user
 USER debian-tor

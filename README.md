@@ -1,12 +1,12 @@
-# Tor Guard Relay Docker Setup
+# Tor Guard Relay Docker Setup with Nyx Monitoring
 
-This repository contains scripts and configuration files to easily set up and run a Tor guard relay using Docker. Running a Tor relay helps improve the Tor network's capacity, speed, and resilience.
+This repository contains scripts and configuration files to easily set up and run a Tor guard relay using Docker, with Nyx included for relay monitoring. Running a Tor relay helps improve the Tor network's capacity, speed, and resilience.
 
 ## Features
 
 - Automated setup of a Tor guard relay in a Docker container
 - Easy configuration through environment variables
-- Includes Nyx for relay monitoring
+- Includes Nyx for comprehensive relay monitoring
 - Persistent data storage
 - Secure default settings
 
@@ -51,7 +51,7 @@ You can customize your Tor relay by editing the following environment variables 
 
 - `TOR_NICKNAME`: The nickname for your relay (default: mydockerguard)
 - `CONTACT_INFO`: Your contact information (default: anonymous@example.com)
-- `RELAY_PORT`: The ORPort for your relay (default: 9101)
+- `RELAY_PORT`: The ORPort for your relay (default: 9001)
 - `DIR_PORT`: The DirPort for your relay (default: 9030)
 - `RELAY_BANDWIDTH_RATE`: The average rate of traffic your relay will allow (default: 3072 KB/s)
 - `RELAY_BANDWIDTH_BURST`: The maximum burst of traffic your relay will allow (default: 4096 KB/s)
@@ -62,7 +62,7 @@ You can customize your Tor relay by editing the following environment variables 
 
 ## Security Considerations
 
-- Ensure your server's firewall allows incoming connections on the relay port (default: 9101)
+- Ensure your server's firewall allows incoming connections on the relay port (default: 9001)
 - Regularly update your Docker images and host system
 - Monitor your relay for any suspicious activity
 - Do not run an exit relay unless you fully understand the risks and legal implications

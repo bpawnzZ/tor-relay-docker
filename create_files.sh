@@ -62,8 +62,8 @@ services:
     environment:
       - TOR_NICKNAME=\${TOR_NICKNAME:-mydockerguard}
       - CONTACT_INFO=\${CONTACT_INFO:-anonymous@example.com}
-      - RELAY_PORT=\${RELAY_PORT:-9001}
-      - DIR_PORT=\${DIR_PORT:-9030}
+      - RELAY_PORT=\${RELAY_PORT:-0.0.0.0:9001}
+      - DIR_PORT=$\{DIR_PORT:-0.0.0.0:9030}
       - RELAY_BANDWIDTH_RATE=\${RELAY_BANDWIDTH_RATE:-3072}
       - RELAY_BANDWIDTH_BURST=\${RELAY_BANDWIDTH_BURST:-4096}
       - TOR_SOCKS_PORT=\${TOR_SOCKS_PORT:-0.0.0.0:9050}

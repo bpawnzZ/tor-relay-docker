@@ -1,4 +1,4 @@
-# Tor Guard Relay Docker Setup
+# Tor Relay Docker Setup + Nyx
 
 This repository contains scripts and configuration files to easily set up and run a Tor guard relay using Docker. Running a Tor relay helps improve the Tor network's capacity, speed, and resilience.
 

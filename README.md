@@ -55,7 +55,7 @@ You can customize your Tor relay by editing the following environment variables 
 - `DIR_PORT`: The DirPort for your relay (default: 9030)
 - `RELAY_BANDWIDTH_RATE`: The average rate of traffic your relay will allow (default: 3072 KB/s)
 - `RELAY_BANDWIDTH_BURST`: The maximum burst of traffic your relay will allow (default: 4096 KB/s)
-- `TOR_SOCKS_PORT`: The SOCKS port for Tor (default: 127.0.0.1:9050)
+- `TOR_SOCKS_PORT`: The SOCKS port for Tor (default: 0.0.0.0:9050)
 - `EXTERNAL_ADDRESS`: Your relay's public IP address (default: auto)
 - `CONTROL_PORT`: The control port for Tor (default: 127.0.0.1:9051)
 - `USE_COOKIE_AUTH`: Whether to use cookie authentication (default: 1)
